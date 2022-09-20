@@ -56,17 +56,14 @@
 
 .subs-form{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
+    align-content: center;
     margin-bottom: 2rem;
     width: 100%;
-
-    display: grid;
-    grid-template-columns: auto auto;
 }
 
 .subs-form input{
-    width: 120%;
     padding: .5rem 1rem;
     border: 1px solid var(--Gray);
     border-radius: 1.5rem;
@@ -87,11 +84,11 @@
     font-size: .8rem;
     font-weight: 500;
     color: var(--Light-Red);
-    margin-left: 1rem;
     font-style: italic;
 }
 
 .subs-form button{
+    width: 25%;
     padding: .5rem 1rem;
     border: none;
     border-radius: 1.5rem;
@@ -137,6 +134,50 @@ footer .social{
     margin-bottom: 1rem;
 }
 
+#popup-wrapper{
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.popup{
+    text-align: center;
+    font-family: var(--libre);
+    margin: 12rem auto;
+    padding: 20px;
+    background: #fff;
+    width: 100%;
+    max-width: 300px;
+    height: 10rem;
+    position: relative;
+}
+
+.popup p{
+    margin-bottom: 20px;
+}
+
+.popup .back-btn{
+    text-decoration: none;
+    color: white;
+    background: var(--Blue);
+    padding: 6px 10px;
+}
+
+.popup .close-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.popup .close-btn::before{
+    content: 'X';
+}
+
 
 
 /* Media queries */
@@ -144,7 +185,7 @@ footer .social{
 @media screen and (max-width: 375px){
     .showcase-content{
         width: 100%;
-        margin-top: 1rem;
+        margin-top: .5rem;
     }
 
     .showcase-content h1{
@@ -158,20 +199,22 @@ footer .social{
     .subs-form{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 1rem;
     }
 
     .subs-form input{
-        width: 150%;
         margin-bottom: .5rem;
     }
 
     .subs-form button{
-        width: 100%;
+        width: 95%;
         margin-top: 10px;
     }
 
     .showcase-content .validation{
         text-align: center;
-        width: 130%;
     }
 }
